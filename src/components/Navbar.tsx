@@ -1,16 +1,24 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { StatusBar } from 'react-native'
 import { theme } from '../config/app.variables'
+import { bell, chat } from '../config/images'
 
-const Navbar = () => {
+const Navbar = ({ navigation, route }: any) => {
+
     return (
         <View style={styles.main}>
             <StatusBar backgroundColor={theme.secondary} />
             <Text style={styles.txt}>Spenzer</Text>
             <View style={{ flexDirection: 'row', gap: 20 }}>
-                <Text onPress={() => { console.log("OH NO") }} style={styles.txt2}>Notif</Text>
-                <Text onPress={() => { console.log("OH YES") }} style={styles.txt2}>Chats</Text>
+                <TouchableOpacity style={styles.touch} onPress={() => { navigation.navigate("Screen_Notification") }}>
+                    <View style={styles.dot} />
+                    <Image source={bell} style={{ height: 30, width: 30 }} />
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.touch} onPress={() => { navigation.navigate("ChatList") }}>
+                    <View style={styles.dot} />
+                    <Image source={chat} style={{ height: 30, width: 30 }} />
+                </TouchableOpacity>
             </View>
         </View>
     )
@@ -19,10 +27,24 @@ const Navbar = () => {
 export default Navbar
 
 const styles = StyleSheet.create({
+    touch:{
+        position:'relative'
+    },
+    dot:{
+        position:'absolute',
+        borderRadius:50,
+        right:-8, top:0,
+        height:10,
+        width:10,
+        backgroundColor:theme.accent
+    },
     txt: {
-        color: 'white',
+        color: 'black',
         fontFamily: 'Poppins-SemiBold',
-        fontSize: 24
+        fontSize: 28,
+        textShadowColor: 'white',
+        textShadowOffset: { width: 1, height: 1 }, 
+        textShadowRadius: 2
     },
     txt2: {
         color: 'white',

@@ -1,5 +1,6 @@
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { theme } from '../config/app.variables';
+import { ihome, ahome, isearch, asearch, ipost, apost, isetting, asetting, iuser, auser } from '../config/images';
 
 
 export default function BottomTabBar({ state, descriptors, navigation }: any) {
@@ -14,58 +15,61 @@ export default function BottomTabBar({ state, descriptors, navigation }: any) {
         <View style={styles.main}>
 
             <TouchableOpacity activeOpacity={1} onPress={() => { ChangeScr(state.routeNames[0]) }} style={styles.child}>
-                <Text style={[styles.txt, { color: state.index === 0 ? highlight : 'white' }]}>
-                    {state.routeNames[0]}
-                </Text>
+                <Image source={state.index === 0 ? ahome : ihome} style={styles.img} />
             </TouchableOpacity>
 
             <TouchableOpacity activeOpacity={1} onPress={() => { ChangeScr(state.routeNames[1]) }} style={styles.child}>
-                <Text style={[styles.txt, { color: state.index === 1 ? highlight : 'white' }]}>
-                    {state.routeNames[1]}
-                </Text>
+                <Image source={state.index === 1 ? asearch : isearch} style={styles.img} />
             </TouchableOpacity>
 
-            <TouchableOpacity activeOpacity={1} onPress={() => { ChangeScr(state.routeNames[2]) }} style={styles.child}>
-                <Text style={[styles.txt, { color: state.index === 2 ? highlight : 'white' }]}>
-                    {state.routeNames[2]}
-                </Text>
+            <TouchableOpacity activeOpacity={1} onPress={() => { ChangeScr(state.routeNames[2]) }} style={[styles.Mchild, { borderColor: state.index === 2 ? theme.secondary : theme.primary }]}>
+                <Image source={state.index === 2 ? apost : ipost} style={styles.Nimg} />
             </TouchableOpacity>
 
             <TouchableOpacity activeOpacity={1} onPress={() => { ChangeScr(state.routeNames[3]) }} style={styles.child}>
-                <Text style={[styles.txt, { color: state.index === 3 ? highlight : 'white' }]}>
-                    {state.routeNames[3]}
-                </Text>
+                <Image source={state.index === 3 ? asetting : isetting} style={styles.img} />
             </TouchableOpacity>
 
             <TouchableOpacity activeOpacity={1} onPress={() => { ChangeScr(state.routeNames[4]) }} style={styles.child}>
-                <Text style={[styles.txt, { color: state.index === 4 ? highlight : 'white' }]}>
-                    {/* {state.routeNames[4]} */}
-                    Acco
-                </Text>
+                <Image source={state.index === 4 ? auser : iuser} style={styles.img} />
             </TouchableOpacity>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
+    img: {
+        height: 30,
+        width: 30,
+    },
+    Nimg: {
+        height: 50,
+        width: 50,
+    },
     main: {
         flexDirection: 'row',
         elevation: 8,
         backgroundColor: theme.secondary,
-        height: 50,
+        height: 60,
         alignItems: 'center',
         justifyContent: 'center',
-        width: '95%',
-        position: 'absolute',
-        bottom: 10,
-        left: '2.5%',
-        borderRadius: 6
     },
     child: {
         flex: 1,
-        width: '10%',
         alignItems: 'center',
         justifyContent: 'center',
+    },
+    Mchild: {
+        flex: 0.8,
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: 70,
+        position: 'relative',
+
+        borderWidth: 4,
+        bottom: 10,
+        borderRadius: 70,
+        backgroundColor: theme.secondary
     },
     txt: {
         fontFamily: "Poppins-Bold",

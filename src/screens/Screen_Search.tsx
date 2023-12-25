@@ -1,9 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { theme } from '../config/app.variables'
+import SearchTab from '../components/SearchTab'
 
 const Screen_Search = () => {
   return (
-    <View>
+    <View style={styles.main}>
+      <SearchTab />
       <Text>Screen_Search</Text>
     </View>
   )
@@ -11,4 +14,9 @@ const Screen_Search = () => {
 
 export default Screen_Search
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  main:{
+    backgroundColor: theme.primary,
+    flex:1
+  }
+})
