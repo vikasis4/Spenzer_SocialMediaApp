@@ -2,12 +2,14 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { theme } from '../config/app.variables';
 
-const Post_description = ({ description }: any): React.JSX.Element => {
+const RenderLongText = ({ description }: any): React.JSX.Element => {
 
     const [state, setState] = React.useState(false);
     React.useEffect(() => {
         description.length > 170 ? setState(true) : null;
     }, [])
+
+    
 
     return (
         <View>
@@ -29,7 +31,7 @@ const Post_description = ({ description }: any): React.JSX.Element => {
     )
 }
 
-export default Post_description
+export default RenderLongText
 
 const styles = StyleSheet.create({
     desc: {

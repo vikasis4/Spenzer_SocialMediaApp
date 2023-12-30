@@ -1,12 +1,12 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'react-native'
+import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView, ImageBackground } from 'react-native'
 import React from 'react'
-import { theme } from '../config/app.variables';
-import { aheart, comment, iheart } from '../config/images';
-import Post_description from './Post_description';
-import { post_type } from '../config/dummy';
+import { theme } from '../../config/app.variables';
+import { aheart, comment, iheart } from '../../config/images';
+import RenderLongText from '../RenderLongText';
+import { post_type } from '../../config/dummy';
 import Post_Tag from './Post_Tag';
 
-const Post = ({ data }: any) => {
+const PostComponent = ({ data }: any) => {
 
     const { _id, author, commentId, description, author_id, image, tagged, tags, likes, author_img }: post_type = data.item;
     const [like, setLike] = React.useState(false);
@@ -27,8 +27,10 @@ const Post = ({ data }: any) => {
                     <Text style={{ color: 'white', fontFamily: 'Poppins-Regular', fontSize: 14, position: 'relative', bottom: 8 }}>{author_id}</Text>
                 </View>
             </View>
-            <TouchableOpacity activeOpacity={0.7} onPress={handleLike}>
-                <Image source={{ uri: image }} style={{ height: 360, width: "100%" }} />
+            <TouchableOpacity activeOpacity={1} onPress={handleLike}>
+                <ImageBackground source={{ uri: image }} style={{ height: 360, width: "100%" }} >
+                    <Image source={aheart} style={styles.like} />
+                </ImageBackground>
             </TouchableOpacity>
 
             <View style={styles.contTwo}>
@@ -39,7 +41,7 @@ const Post = ({ data }: any) => {
             </View>
 
 
-            <Post_description description={description} />
+            <RenderLongText description={description} />
 
             <Post_Tag title="People Tagged" data={tagged} />
 
@@ -51,9 +53,13 @@ const Post = ({ data }: any) => {
     )
 }
 
-export default Post
+export default PostComponent
 
 const styles = StyleSheet.create({
+    like: {
+        height: 100,
+        width: 100,
+    },
     contTwo: {
         flexDirection: 'row',
         paddingHorizontal: 12,
@@ -72,7 +78,7 @@ const styles = StyleSheet.create({
     },
     cont: {
         margin: 10,
-        borderWidth:1,
+        borderWidth: 1,
         elevation: 8,
         paddingVertical: 12,
         backgroundColor: theme.secondary
