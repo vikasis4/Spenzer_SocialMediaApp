@@ -39,12 +39,9 @@ const styles = StyleSheet.create({
         backgroundColor:theme.accent
     },
     txt: {
-        color: 'black',
+        color: 'white',
         fontFamily: 'Poppins-SemiBold',
         fontSize: 28,
-        textShadowColor: 'white',
-        textShadowOffset: { width: 1, height: 1 }, 
-        textShadowRadius: 2
     },
     txt2: {
         color: 'white',

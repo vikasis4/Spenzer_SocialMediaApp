@@ -1,18 +1,29 @@
 import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { theme } from '../config/app.variables';
 import { ihome, ahome, isearch, asearch, ipost, apost, isetting, asetting, iuser, auser } from '../config/images';
-
+import BottomNavAni from '../animation/BottomNavAni';
+import React from 'react';
 
 export default function BottomTabBar({ state, descriptors, navigation }: any) {
 
+    const [currentPosition, setCurrentPosition] = React.useState('3%');
+    const keyValue: any = {
+        Home: '3%',
+        Search: '23%',
+        Post: '50%',
+        Setting: '63%',
+        Account: '83%'
+    };
+
     const ChangeScr = (value: string) => {
+        setCurrentPosition(keyValue[value])
         navigation.navigate(value);
     }
-    const highlight = theme.accent
-
 
     return (
         <View style={styles.main}>
+
+            <BottomNavAni currentPosition={currentPosition} />
 
             <TouchableOpacity activeOpacity={1} onPress={() => { ChangeScr(state.routeNames[0]) }} style={styles.child}>
                 <Image source={state.index === 0 ? ahome : ihome} style={styles.img} />
@@ -22,7 +33,7 @@ export default function BottomTabBar({ state, descriptors, navigation }: any) {
                 <Image source={state.index === 1 ? asearch : isearch} style={styles.img} />
             </TouchableOpacity>
 
-            <TouchableOpacity activeOpacity={1} onPress={() => { ChangeScr(state.routeNames[2]) }} style={[styles.Mchild, { borderColor: state.index === 2 ? theme.secondary : theme.primary }]}>
+            <TouchableOpacity activeOpacity={1} onPress={() => { ChangeScr(state.routeNames[2]) }} style={[styles.Mchild]}>
                 <Image source={state.index === 2 ? apost : ipost} style={styles.Nimg} />
             </TouchableOpacity>
 
@@ -48,11 +59,11 @@ const styles = StyleSheet.create({
     },
     main: {
         flexDirection: 'row',
-        elevation: 8,
         backgroundColor: theme.secondary,
         height: 60,
         alignItems: 'center',
         justifyContent: 'center',
+        position: 'relative',
     },
     child: {
         flex: 1,

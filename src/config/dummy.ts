@@ -15,8 +15,14 @@ export interface comment_type {
     author_id: string,
     comment: string,
     likes: number,
-    replies: {replyToPersionId:string, author_name: string, author_id: string, comment: string, likes: number }[]
+    replies: { replyToPersionId: string, author_name: string, author_id: string, comment: string, likes: number }[]
 }
+export type story_type = {
+imageLink:String,
+name:String,
+userId:String,
+}
+
 
 export const post: post_type[] = [
     {
@@ -24,8 +30,8 @@ export const post: post_type[] = [
         author: 'Vikas Singh',
         author_id: '@vikas_sanp',
         author_img: 'https://source.unsplash.com/random/200x200?sig=0',
-        image: 'https://source.unsplash.com/random/200x200?sig=1',
-        description: 'This is my best time and im loving it, hope for best This is my best time and im loving it, hope for best This is my best time and im loving it, hope for best This is my best time and im loving it, hope for best This is my best time and im loving it, hope for best This is my best time and im loving it, hope for best This is my best time and im loving it, hope for best This is my best time and im loving it, hope for best This is my best time and im loving it, hope for best',
+        image: 'https://source.unsplash.com/random/200x200?sig=12',
+        description: 'Mollit enim amet do nulla do aliqua cillum. Incididunt esse proident dolor labore id pariatur mollit id deserunt nisi elit. In amet non pariatur sit est. Incididunt laborum nostrud mollit cupidatat eiusmodEsse qui in Lorem et laboris sunt aliquip enim ad pariatur. Non ullamco nisi exercitation et qui consequat aliqua mollit qui quis consectetur id elit. Anim cupidatat quis sint irure dolor proident aliquip dolor mollit laboris. Commodo reprehenderit excepteur do pariatur aliqua enim ad reprehenderit ipsum cupidatat nostrud cillum voluptate aute. Ex culpa ipsum fugiat tempor adipisicing minim laborum.',
         tagged: ['@ankus_293', "@weCHat_09", "@SHAMBY_82", "@De_souza_p2"],
         tags: ['#perfect', '#mySpace'],
         likes: 23019,
@@ -37,7 +43,7 @@ export const post: post_type[] = [
         author: 'Sham Singh',
         author_id: '@Wxs_202',
         image: 'https://source.unsplash.com/random/200x200?sig=2',
-        description: 'This is my best time and im loving it, hope for best',
+        description: 'Mollit enim amet do nulla do aliqua cillum. Incididunt esse proident dolor labore id pariatur mollit id deserunt nisi elit. In amet non pariatur sit est. Incididunt laborum nostrud mollit cupidatat eiusmodEsse qui in Lorem et laboris sunt aliquip enim ad pariatur. Non ullamco nisi exercitation et qui consequat aliqua mollit qui quis consectetur id elit. Anim cupidatat quis sint irure dolor proident aliquip dolor mollit laboris. Commodo reprehenderit excepteur do pariatur aliqua enim ad reprehenderit ipsum cupidatat nostrud cillum voluptate aute. Ex culpa ipsum fugiat tempor adipisicing minim laborum.',
         tagged: ['@ankus_293', "@weCHat_09"],
         tags: ['#perfect', '#mySpace'],
         likes: 23019,
@@ -49,7 +55,7 @@ export const post: post_type[] = [
         author: 'Beer Biceps',
         author_id: '@ankus_293',
         image: 'https://source.unsplash.com/random/200x200?sig=3',
-        description: 'This is my best time and im loving it, hope for best',
+        description: 'Mollit enim amet do nulla do aliqua cillum. Incididunt esse proident dolor labore id pariatur mollit id deserunt nisi elit. In amet non pariatur sit est. Incididunt laborum nostrud mollit cupidatat eiusmodEsse qui in Lorem et laboris sunt aliquip enim ad pariatur. Non ullamco nisi exercitation et qui consequat aliqua mollit qui quis consectetur id elit. Anim cupidatat quis sint irure dolor proident aliquip dolor mollit laboris. Commodo reprehenderit excepteur do pariatur aliqua enim ad reprehenderit ipsum cupidatat nostrud cillum voluptate aute. Ex culpa ipsum fugiat tempor adipisicing minim laborum.',
         tagged: ['@ankus_293', "@weCHat_09"],
         tags: ['#perfect', '#mySpace'],
         likes: 23019,
@@ -61,7 +67,7 @@ export const post: post_type[] = [
         author_img: 'https://source.unsplash.com/random/200x200?sig=14',
         author_id: '@weCHat_09',
         image: 'https://source.unsplash.com/random/200x200?sig=4',
-        description: 'This is my best time and im loving it, hope for best',
+        description: 'Mollit enim amet do nulla do aliqua cillum. Incididunt esse proident dolor labore id pariatur mollit id deserunt nisi elit. In amet non pariatur sit est. Incididunt laborum nostrud mollit cupidatat eiusmodEsse qui in Lorem et laboris sunt aliquip enim ad pariatur. Non ullamco nisi exercitation et qui consequat aliqua mollit qui quis consectetur id elit. Anim cupidatat quis sint irure dolor proident aliquip dolor mollit laboris. Commodo reprehenderit excepteur do pariatur aliqua enim ad reprehenderit ipsum cupidatat nostrud cillum voluptate aute. Ex culpa ipsum fugiat tempor adipisicing minim laborum.',
         tagged: ['@ankus_293', "@weCHat_09"],
         tags: ['#perfect', '#mySpace'],
         likes: 23019,
@@ -72,7 +78,7 @@ export const post: post_type[] = [
         author: 'Lodu kumar',
         author_id: '@kjds_2',
         image: 'https://source.unsplash.com/random/200x200?sig=5',
-        description: 'This is my best time and im loving it, hope for best',
+        description: 'Mollit enim amet do nulla do aliqua cillum. Incididunt esse proident dolor labore id pariatur mollit id deserunt nisi elit. In amet non pariatur sit est. Incididunt laborum nostrud mollit cupidatat eiusmodEsse qui in Lorem et laboris sunt aliquip enim ad pariatur. Non ullamco nisi exercitation et qui consequat aliqua mollit qui quis consectetur id elit. Anim cupidatat quis sint irure dolor proident aliquip dolor mollit laboris. Commodo reprehenderit excepteur do pariatur aliqua enim ad reprehenderit ipsum cupidatat nostrud cillum voluptate aute. Ex culpa ipsum fugiat tempor adipisicing minim laborum.',
         tagged: ['@ankus_293', "@weCHat_09"],
         tags: ['#perfect', '#mySpace'],
         likes: 23019,
@@ -85,7 +91,7 @@ export const post: post_type[] = [
         author_id: '@vikas_sanp',
         image: 'https://source.unsplash.com/random/200x200?sig=6',
         author_img: 'https://source.unsplash.com/random/200x200?sig=16',
-        description: 'This is my best time and im loving it, hope for best',
+        description: 'Mollit enim amet do nulla do aliqua cillum. Incididunt esse proident dolor labore id pariatur mollit id deserunt nisi elit. In amet non pariatur sit est. Incididunt laborum nostrud mollit cupidatat eiusmodEsse qui in Lorem et laboris sunt aliquip enim ad pariatur. Non ullamco nisi exercitation et qui consequat aliqua mollit qui quis consectetur id elit. Anim cupidatat quis sint irure dolor proident aliquip dolor mollit laboris. Commodo reprehenderit excepteur do pariatur aliqua enim ad reprehenderit ipsum cupidatat nostrud cillum voluptate aute. Ex culpa ipsum fugiat tempor adipisicing minim laborum.',
         tagged: ['@ankus_293', "@weCHat_09"],
         tags: ['#perfect', '#mySpace'],
         likes: 23019,
@@ -97,7 +103,7 @@ export const post: post_type[] = [
         author_id: '@vikas_sanp',
         image: 'https://source.unsplash.com/random/200x200?sig=7',
         author_img: 'https://source.unsplash.com/random/200x200?sig=17',
-        description: 'This is my best time and im loving it, hope for best',
+        description: 'Mollit enim amet do nulla do aliqua cillum. Incididunt esse proident dolor labore id pariatur mollit id deserunt nisi elit. In amet non pariatur sit est. Incididunt laborum nostrud mollit cupidatat eiusmodEsse qui in Lorem et laboris sunt aliquip enim ad pariatur. Non ullamco nisi exercitation et qui consequat aliqua mollit qui quis consectetur id elit. Anim cupidatat quis sint irure dolor proident aliquip dolor mollit laboris. Commodo reprehenderit excepteur do pariatur aliqua enim ad reprehenderit ipsum cupidatat nostrud cillum voluptate aute. Ex culpa ipsum fugiat tempor adipisicing minim laborum.',
         tagged: ['@ankus_293', "@weCHat_09"],
         tags: ['#perfect', '#mySpace'],
         likes: 23019,
@@ -109,7 +115,7 @@ export const post: post_type[] = [
         author_id: '@vikas_sanp',
         author_img: 'https://source.unsplash.com/random/200x200?sig=18',
         image: 'https://source.unsplash.com/random/200x200?sig=8',
-        description: 'This is my best time and im loving it, hope for best',
+        description: 'Mollit enim amet do nulla do aliqua cillum. Incididunt esse proident dolor labore id pariatur mollit id deserunt nisi elit. In amet non pariatur sit est. Incididunt laborum nostrud mollit cupidatat eiusmodEsse qui in Lorem et laboris sunt aliquip enim ad pariatur. Non ullamco nisi exercitation et qui consequat aliqua mollit qui quis consectetur id elit. Anim cupidatat quis sint irure dolor proident aliquip dolor mollit laboris. Commodo reprehenderit excepteur do pariatur aliqua enim ad reprehenderit ipsum cupidatat nostrud cillum voluptate aute. Ex culpa ipsum fugiat tempor adipisicing minim laborum.',
         tagged: ['@ankus_293', "@weCHat_09"],
         tags: ['#perfect', '#mySpace'],
         likes: 23019,
@@ -121,7 +127,7 @@ export const post: post_type[] = [
         author_id: '@vikas_sanp',
         author_img: 'https://source.unsplash.com/random/200x200?sig=19',
         image: 'https://source.unsplash.com/random/200x200?sig=9',
-        description: 'This is my best time and im loving it, hope for best',
+        description: 'Mollit enim amet do nulla do aliqua cillum. Incididunt esse proident dolor labore id pariatur mollit id deserunt nisi elit. In amet non pariatur sit est. Incididunt laborum nostrud mollit cupidatat eiusmodEsse qui in Lorem et laboris sunt aliquip enim ad pariatur. Non ullamco nisi exercitation et qui consequat aliqua mollit qui quis consectetur id elit. Anim cupidatat quis sint irure dolor proident aliquip dolor mollit laboris. Commodo reprehenderit excepteur do pariatur aliqua enim ad reprehenderit ipsum cupidatat nostrud cillum voluptate aute. Ex culpa ipsum fugiat tempor adipisicing minim laborum.',
         tagged: ['@ankus_293', "@weCHat_09"],
         tags: ['#perfect', '#mySpace'],
         likes: 23019,
@@ -133,7 +139,7 @@ export const post: post_type[] = [
         author_img: 'https://source.unsplash.com/random/200x200?sig=20',
         author_id: '@vikas_sanp',
         image: 'https://source.unsplash.com/random/200x200?sig=10',
-        description: 'This is my best time and im loving it, hope for best',
+        description: 'Mollit enim amet do nulla do aliqua cillum. Incididunt esse proident dolor labore id pariatur mollit id deserunt nisi elit. In amet non pariatur sit est. Incididunt laborum nostrud mollit cupidatat eiusmodEsse qui in Lorem et laboris sunt aliquip enim ad pariatur. Non ullamco nisi exercitation et qui consequat aliqua mollit qui quis consectetur id elit. Anim cupidatat quis sint irure dolor proident aliquip dolor mollit laboris. Commodo reprehenderit excepteur do pariatur aliqua enim ad reprehenderit ipsum cupidatat nostrud cillum voluptate aute. Ex culpa ipsum fugiat tempor adipisicing minim laborum.',
         tagged: ['@ankus_293', "@weCHat_09"],
         tags: ['#perfect', '#mySpace'],
         likes: 23019,
@@ -149,14 +155,14 @@ export const comments: comment_type[] = [
         likes: 21,
         replies: [
             {
-                replyToPersionId:"@ixbxe",
+                replyToPersionId: "@ixbxe",
                 comment: "Bery naise Reply, Wow",
                 author_name: 'Bikas',
                 author_id: "@tugWar",
                 likes: 2,
             },
             {
-                replyToPersionId:"@tugWar",
+                replyToPersionId: "@tugWar",
                 comment: "Lodu aur koi kam dhanda nhi hai kya ?",
                 author_name: 'ramesh',
                 author_id: "@ramesh872",
@@ -172,14 +178,14 @@ export const comments: comment_type[] = [
         likes: 21,
         replies: [
             {
-                replyToPersionId:"@ixbxe",
+                replyToPersionId: "@ixbxe",
                 comment: "Bery naise Reply, Qui cupidatat Lorem nisi dolor duis sint aliquip. Duis sunt do voluptate ut proident qui anim et magna quis nulla ad. Laborum laborum voluptate et excepteur ullamco mollit duis veniam mollit. Amet sint nulla exercitation commodo nulla ipsum quis laboris consequat irure. Aute ex mollit ad est eiusmod fugiat fugiat voluptate proident.",
                 author_name: 'Bikas',
                 author_id: "@tugWar",
                 likes: 2,
             },
             {
-                replyToPersionId:"@tugWar",
+                replyToPersionId: "@tugWar",
                 comment: "Lodu aur koi kam dhanda nhi hai kya Anim id cillum consectetur Lorem nostrud mollit mollit cillum culpa. Adipisicing deserunt nostrud elit laboris dolore elit eiusmod velit id. Deserunt aliquip quis et sit culpa eiusmod adipisicing mollit fugiat aliqua.?",
                 author_name: 'ramesh',
                 author_id: "@ramesh872",
@@ -195,14 +201,14 @@ export const comments: comment_type[] = [
         likes: 21,
         replies: [
             {
-                replyToPersionId:"@ixbxe",
+                replyToPersionId: "@ixbxe",
                 comment: "Bery naise ReNisi excepteur proident consequat culpa aliquip nulla nulla sunt tempor dolore ipsum exercitation. Ullamco cupidatat duis duis laborum nostrud. Nostrud et reprehenderit ex consectetur consectetur est eiusmod aliquip id consequat amet.ply, Wow",
                 author_name: 'Bikas',
                 author_id: "@tugWar",
                 likes: 2,
             },
             {
-                replyToPersionId:"@tugWar",
+                replyToPersionId: "@tugWar",
                 comment: "Lodu aur koId occaecat aute et aliquip mollit. Voluptate velit eiusmod sunt irure qui sunt magna nulla tempor laborum consequat in aliquip non. Ex anim eiusmod minim aliqua. Quis eiusmod sit incididunt tempor. Laboris in excepteur anim occaecat cillum excepteur pariatur. Commodo ut aliquip nisi in duis.i kam dhanda nhi hai kya ?",
                 author_name: 'ramesh',
                 author_id: "@ramesh872",
@@ -218,14 +224,14 @@ export const comments: comment_type[] = [
         likes: 21,
         replies: [
             {
-                replyToPersionId:"@ixbxe",
+                replyToPersionId: "@ixbxe",
                 comment: "Bery naise Reply, WoCommodo quis elit aute voluptate aute est ut. Ut fugiat adipisicing amet sunt magna anim excepteur enim. Nostrud magna nostrud nulla commodo et occaecat elit ipsum ullamco Lorem dolore consectetur officia fugiat.w",
                 author_name: 'Bikas',
                 author_id: "@tugWar",
                 likes: 2,
             },
             {
-                replyToPersionId:"@tugWar",
+                replyToPersionId: "@tugWar",
                 comment: "Lodu aur koi kam dhanda nMinim officia eiusmod elit quis nostrud esse commodo esse culpa cupidatat. Cillum non amet magna sunt id reprehenderit non quis duis. Exercitation tempor id duis exercitation ipsum in esse occaecat et consectetur adipisicing commodo voluptate. Anim anim nostrud irure nostrud magna ipsum qui consectetur esse dolor. Consequat elit incididunt officia dolor et nisi sit incididunt.hi hai kya ?",
                 author_name: 'ramesh',
                 author_id: "@ramesh872",
@@ -241,14 +247,14 @@ export const comments: comment_type[] = [
         likes: 21,
         replies: [
             {
-                replyToPersionId:"@ixbxe",
+                replyToPersionId: "@ixbxe",
                 comment: "Bery naise Reply, Wow",
                 author_name: 'Bikas',
                 author_id: "@tugWar",
                 likes: 2,
             },
             {
-                replyToPersionId:"@tugWar",
+                replyToPersionId: "@tugWar",
                 comment: "Lodu aur koi kam dhanda nhi hai kya ?",
                 author_name: 'ramesh',
                 author_id: "@ramesh872",
@@ -264,14 +270,14 @@ export const comments: comment_type[] = [
         likes: 21,
         replies: [
             {
-                replyToPersionId:"@ixbxe",
+                replyToPersionId: "@ixbxe",
                 comment: "Bery naise Reply, Qui cupidatat Lorem nisi dolor duis sint aliquip. Duis sunt do voluptate ut proident qui anim et magna quis nulla ad. Laborum laborum voluptate et excepteur ullamco mollit duis veniam mollit. Amet sint nulla exercitation commodo nulla ipsum quis laboris consequat irure. Aute ex mollit ad est eiusmod fugiat fugiat voluptate proident.",
                 author_name: 'Bikas',
                 author_id: "@tugWar",
                 likes: 2,
             },
             {
-                replyToPersionId:"@tugWar",
+                replyToPersionId: "@tugWar",
                 comment: "Lodu aur koi kam dhanda nhi hai kya Anim id cillum consectetur Lorem nostrud mollit mollit cillum culpa. Adipisicing deserunt nostrud elit laboris dolore elit eiusmod velit id. Deserunt aliquip quis et sit culpa eiusmod adipisicing mollit fugiat aliqua.?",
                 author_name: 'ramesh',
                 author_id: "@ramesh872",
@@ -287,14 +293,14 @@ export const comments: comment_type[] = [
         likes: 21,
         replies: [
             {
-                replyToPersionId:"@ixbxe",
+                replyToPersionId: "@ixbxe",
                 comment: "Bery naise ReNisi excepteur proident consequat culpa aliquip nulla nulla sunt tempor dolore ipsum exercitation. Ullamco cupidatat duis duis laborum nostrud. Nostrud et reprehenderit ex consectetur consectetur est eiusmod aliquip id consequat amet.ply, Wow",
                 author_name: 'Bikas',
                 author_id: "@tugWar",
                 likes: 2,
             },
             {
-                replyToPersionId:"@tugWar",
+                replyToPersionId: "@tugWar",
                 comment: "Lodu aur koId occaecat aute et aliquip mollit. Voluptate velit eiusmod sunt irure qui sunt magna nulla tempor laborum consequat in aliquip non. Ex anim eiusmod minim aliqua. Quis eiusmod sit incididunt tempor. Laboris in excepteur anim occaecat cillum excepteur pariatur. Commodo ut aliquip nisi in duis.i kam dhanda nhi hai kya ?",
                 author_name: 'ramesh',
                 author_id: "@ramesh872",
@@ -310,14 +316,14 @@ export const comments: comment_type[] = [
         likes: 21,
         replies: [
             {
-                replyToPersionId:"@ixbxe",
+                replyToPersionId: "@ixbxe",
                 comment: "Bery naise Reply, WoCommodo quis elit aute voluptate aute est ut. Ut fugiat adipisicing amet sunt magna anim excepteur enim. Nostrud magna nostrud nulla commodo et occaecat elit ipsum ullamco Lorem dolore consectetur officia fugiat.w",
                 author_name: 'Bikas',
                 author_id: "@tugWar",
                 likes: 2,
             },
             {
-                replyToPersionId:"@tugWar",
+                replyToPersionId: "@tugWar",
                 comment: "Lodu aur koi kam dhanda nMinim officia eiusmod elit quis nostrud esse commodo esse culpa cupidatat. Cillum non amet magna sunt id reprehenderit non quis duis. Exercitation tempor id duis exercitation ipsum in esse occaecat et consectetur adipisicing commodo voluptate. Anim anim nostrud irure nostrud magna ipsum qui consectetur esse dolor. Consequat elit incididunt officia dolor et nisi sit incididunt.hi hai kya ?",
                 author_name: 'ramesh',
                 author_id: "@ramesh872",
@@ -333,14 +339,14 @@ export const comments: comment_type[] = [
         likes: 21,
         replies: [
             {
-                replyToPersionId:"@ixbxe",
+                replyToPersionId: "@ixbxe",
                 comment: "Bery naise Reply, Wow",
                 author_name: 'Bikas',
                 author_id: "@tugWar",
                 likes: 2,
             },
             {
-                replyToPersionId:"@tugWar",
+                replyToPersionId: "@tugWar",
                 comment: "Lodu aur koi kam dhanda nhi hai kya ?",
                 author_name: 'ramesh',
                 author_id: "@ramesh872",
@@ -356,14 +362,14 @@ export const comments: comment_type[] = [
         likes: 21,
         replies: [
             {
-                replyToPersionId:"@ixbxe",
+                replyToPersionId: "@ixbxe",
                 comment: "Bery naise Reply, Qui cupidatat Lorem nisi dolor duis sint aliquip. Duis sunt do voluptate ut proident qui anim et magna quis nulla ad. Laborum laborum voluptate et excepteur ullamco mollit duis veniam mollit. Amet sint nulla exercitation commodo nulla ipsum quis laboris consequat irure. Aute ex mollit ad est eiusmod fugiat fugiat voluptate proident.",
                 author_name: 'Bikas',
                 author_id: "@tugWar",
                 likes: 2,
             },
             {
-                replyToPersionId:"@tugWar",
+                replyToPersionId: "@tugWar",
                 comment: "Lodu aur koi kam dhanda nhi hai kya Anim id cillum consectetur Lorem nostrud mollit mollit cillum culpa. Adipisicing deserunt nostrud elit laboris dolore elit eiusmod velit id. Deserunt aliquip quis et sit culpa eiusmod adipisicing mollit fugiat aliqua.?",
                 author_name: 'ramesh',
                 author_id: "@ramesh872",
@@ -379,14 +385,14 @@ export const comments: comment_type[] = [
         likes: 21,
         replies: [
             {
-                replyToPersionId:"@ixbxe",
+                replyToPersionId: "@ixbxe",
                 comment: "Bery naise ReNisi excepteur proident consequat culpa aliquip nulla nulla sunt tempor dolore ipsum exercitation. Ullamco cupidatat duis duis laborum nostrud. Nostrud et reprehenderit ex consectetur consectetur est eiusmod aliquip id consequat amet.ply, Wow",
                 author_name: 'Bikas',
                 author_id: "@tugWar",
                 likes: 2,
             },
             {
-                replyToPersionId:"@tugWar",
+                replyToPersionId: "@tugWar",
                 comment: "Lodu aur koId occaecat aute et aliquip mollit. Voluptate velit eiusmod sunt irure qui sunt magna nulla tempor laborum consequat in aliquip non. Ex anim eiusmod minim aliqua. Quis eiusmod sit incididunt tempor. Laboris in excepteur anim occaecat cillum excepteur pariatur. Commodo ut aliquip nisi in duis.i kam dhanda nhi hai kya ?",
                 author_name: 'ramesh',
                 author_id: "@ramesh872",
@@ -402,14 +408,14 @@ export const comments: comment_type[] = [
         likes: 21,
         replies: [
             {
-                replyToPersionId:"@ixbxe",
+                replyToPersionId: "@ixbxe",
                 comment: "Bery naise Reply, WoCommodo quis elit aute voluptate aute est ut. Ut fugiat adipisicing amet sunt magna anim excepteur enim. Nostrud magna nostrud nulla commodo et occaecat elit ipsum ullamco Lorem dolore consectetur officia fugiat.w",
                 author_name: 'Bikas',
                 author_id: "@tugWar",
                 likes: 2,
             },
             {
-                replyToPersionId:"@tugWar",
+                replyToPersionId: "@tugWar",
                 comment: "Lodu aur koi kam dhanda nMinim officia eiusmod elit quis nostrud esse commodo esse culpa cupidatat. Cillum non amet magna sunt id reprehenderit non quis duis. Exercitation tempor id duis exercitation ipsum in esse occaecat et consectetur adipisicing commodo voluptate. Anim anim nostrud irure nostrud magna ipsum qui consectetur esse dolor. Consequat elit incididunt officia dolor et nisi sit incididunt.hi hai kya ?",
                 author_name: 'ramesh',
                 author_id: "@ramesh872",
@@ -425,14 +431,14 @@ export const comments: comment_type[] = [
         likes: 21,
         replies: [
             {
-                replyToPersionId:"@ixbxe",
+                replyToPersionId: "@ixbxe",
                 comment: "Bery naise Reply, Wow",
                 author_name: 'Bikas',
                 author_id: "@tugWar",
                 likes: 2,
             },
             {
-                replyToPersionId:"@tugWar",
+                replyToPersionId: "@tugWar",
                 comment: "Lodu aur koi kam dhanda nhi hai kya ?",
                 author_name: 'ramesh',
                 author_id: "@ramesh872",
@@ -448,14 +454,14 @@ export const comments: comment_type[] = [
         likes: 21,
         replies: [
             {
-                replyToPersionId:"@ixbxe",
+                replyToPersionId: "@ixbxe",
                 comment: "Bery naise Reply, Qui cupidatat Lorem nisi dolor duis sint aliquip. Duis sunt do voluptate ut proident qui anim et magna quis nulla ad. Laborum laborum voluptate et excepteur ullamco mollit duis veniam mollit. Amet sint nulla exercitation commodo nulla ipsum quis laboris consequat irure. Aute ex mollit ad est eiusmod fugiat fugiat voluptate proident.",
                 author_name: 'Bikas',
                 author_id: "@tugWar",
                 likes: 2,
             },
             {
-                replyToPersionId:"@tugWar",
+                replyToPersionId: "@tugWar",
                 comment: "Lodu aur koi kam dhanda nhi hai kya Anim id cillum consectetur Lorem nostrud mollit mollit cillum culpa. Adipisicing deserunt nostrud elit laboris dolore elit eiusmod velit id. Deserunt aliquip quis et sit culpa eiusmod adipisicing mollit fugiat aliqua.?",
                 author_name: 'ramesh',
                 author_id: "@ramesh872",
@@ -471,14 +477,14 @@ export const comments: comment_type[] = [
         likes: 21,
         replies: [
             {
-                replyToPersionId:"@ixbxe",
+                replyToPersionId: "@ixbxe",
                 comment: "Bery naise ReNisi excepteur proident consequat culpa aliquip nulla nulla sunt tempor dolore ipsum exercitation. Ullamco cupidatat duis duis laborum nostrud. Nostrud et reprehenderit ex consectetur consectetur est eiusmod aliquip id consequat amet.ply, Wow",
                 author_name: 'Bikas',
                 author_id: "@tugWar",
                 likes: 2,
             },
             {
-                replyToPersionId:"@tugWar",
+                replyToPersionId: "@tugWar",
                 comment: "Lodu aur koId occaecat aute et aliquip mollit. Voluptate velit eiusmod sunt irure qui sunt magna nulla tempor laborum consequat in aliquip non. Ex anim eiusmod minim aliqua. Quis eiusmod sit incididunt tempor. Laboris in excepteur anim occaecat cillum excepteur pariatur. Commodo ut aliquip nisi in duis.i kam dhanda nhi hai kya ?",
                 author_name: 'ramesh',
                 author_id: "@ramesh872",
@@ -494,14 +500,14 @@ export const comments: comment_type[] = [
         likes: 21,
         replies: [
             {
-                replyToPersionId:"@ixbxe",
+                replyToPersionId: "@ixbxe",
                 comment: "Bery naise Reply, WoCommodo quis elit aute voluptate aute est ut. Ut fugiat adipisicing amet sunt magna anim excepteur enim. Nostrud magna nostrud nulla commodo et occaecat elit ipsum ullamco Lorem dolore consectetur officia fugiat.w",
                 author_name: 'Bikas',
                 author_id: "@tugWar",
                 likes: 2,
             },
             {
-                replyToPersionId:"@tugWar",
+                replyToPersionId: "@tugWar",
                 comment: "Lodu aur koi kam dhanda nMinim officia eiusmod elit quis nostrud esse commodo esse culpa cupidatat. Cillum non amet magna sunt id reprehenderit non quis duis. Exercitation tempor id duis exercitation ipsum in esse occaecat et consectetur adipisicing commodo voluptate. Anim anim nostrud irure nostrud magna ipsum qui consectetur esse dolor. Consequat elit incididunt officia dolor et nisi sit incididunt.hi hai kya ?",
                 author_name: 'ramesh',
                 author_id: "@ramesh872",
@@ -517,14 +523,14 @@ export const comments: comment_type[] = [
         likes: 21,
         replies: [
             {
-                replyToPersionId:"@ixbxe",
+                replyToPersionId: "@ixbxe",
                 comment: "Bery naise Reply, Wow",
                 author_name: 'Bikas',
                 author_id: "@tugWar",
                 likes: 2,
             },
             {
-                replyToPersionId:"@tugWar",
+                replyToPersionId: "@tugWar",
                 comment: "Lodu aur koi kam dhanda nhi hai kya ?",
                 author_name: 'ramesh',
                 author_id: "@ramesh872",
@@ -540,14 +546,14 @@ export const comments: comment_type[] = [
         likes: 21,
         replies: [
             {
-                replyToPersionId:"@ixbxe",
+                replyToPersionId: "@ixbxe",
                 comment: "Bery naise Reply, Qui cupidatat Lorem nisi dolor duis sint aliquip. Duis sunt do voluptate ut proident qui anim et magna quis nulla ad. Laborum laborum voluptate et excepteur ullamco mollit duis veniam mollit. Amet sint nulla exercitation commodo nulla ipsum quis laboris consequat irure. Aute ex mollit ad est eiusmod fugiat fugiat voluptate proident.",
                 author_name: 'Bikas',
                 author_id: "@tugWar",
                 likes: 2,
             },
             {
-                replyToPersionId:"@tugWar",
+                replyToPersionId: "@tugWar",
                 comment: "Lodu aur koi kam dhanda nhi hai kya Anim id cillum consectetur Lorem nostrud mollit mollit cillum culpa. Adipisicing deserunt nostrud elit laboris dolore elit eiusmod velit id. Deserunt aliquip quis et sit culpa eiusmod adipisicing mollit fugiat aliqua.?",
                 author_name: 'ramesh',
                 author_id: "@ramesh872",
@@ -563,14 +569,14 @@ export const comments: comment_type[] = [
         likes: 21,
         replies: [
             {
-                replyToPersionId:"@ixbxe",
+                replyToPersionId: "@ixbxe",
                 comment: "Bery naise ReNisi excepteur proident consequat culpa aliquip nulla nulla sunt tempor dolore ipsum exercitation. Ullamco cupidatat duis duis laborum nostrud. Nostrud et reprehenderit ex consectetur consectetur est eiusmod aliquip id consequat amet.ply, Wow",
                 author_name: 'Bikas',
                 author_id: "@tugWar",
                 likes: 2,
             },
             {
-                replyToPersionId:"@tugWar",
+                replyToPersionId: "@tugWar",
                 comment: "Lodu aur koId occaecat aute et aliquip mollit. Voluptate velit eiusmod sunt irure qui sunt magna nulla tempor laborum consequat in aliquip non. Ex anim eiusmod minim aliqua. Quis eiusmod sit incididunt tempor. Laboris in excepteur anim occaecat cillum excepteur pariatur. Commodo ut aliquip nisi in duis.i kam dhanda nhi hai kya ?",
                 author_name: 'ramesh',
                 author_id: "@ramesh872",
@@ -586,14 +592,14 @@ export const comments: comment_type[] = [
         likes: 21,
         replies: [
             {
-                replyToPersionId:"@ixbxe",
+                replyToPersionId: "@ixbxe",
                 comment: "Bery naise Reply, WoCommodo quis elit aute voluptate aute est ut. Ut fugiat adipisicing amet sunt magna anim excepteur enim. Nostrud magna nostrud nulla commodo et occaecat elit ipsum ullamco Lorem dolore consectetur officia fugiat.w",
                 author_name: 'Bikas',
                 author_id: "@tugWar",
                 likes: 2,
             },
             {
-                replyToPersionId:"@tugWar",
+                replyToPersionId: "@tugWar",
                 comment: "Lodu aur koi kam dhanda nMinim officia eiusmod elit quis nostrud esse commodo esse culpa cupidatat. Cillum non amet magna sunt id reprehenderit non quis duis. Exercitation tempor id duis exercitation ipsum in esse occaecat et consectetur adipisicing commodo voluptate. Anim anim nostrud irure nostrud magna ipsum qui consectetur esse dolor. Consequat elit incididunt officia dolor et nisi sit incididunt.hi hai kya ?",
                 author_name: 'ramesh',
                 author_id: "@ramesh872",
@@ -609,14 +615,14 @@ export const comments: comment_type[] = [
         likes: 21,
         replies: [
             {
-                replyToPersionId:"@ixbxe",
+                replyToPersionId: "@ixbxe",
                 comment: "Bery naise Reply, Wow",
                 author_name: 'Bikas',
                 author_id: "@tugWar",
                 likes: 2,
             },
             {
-                replyToPersionId:"@tugWar",
+                replyToPersionId: "@tugWar",
                 comment: "Lodu aur koi kam dhanda nhi hai kya ?",
                 author_name: 'ramesh',
                 author_id: "@ramesh872",
@@ -632,14 +638,14 @@ export const comments: comment_type[] = [
         likes: 21,
         replies: [
             {
-                replyToPersionId:"@ixbxe",
+                replyToPersionId: "@ixbxe",
                 comment: "Bery naise Reply, Qui cupidatat Lorem nisi dolor duis sint aliquip. Duis sunt do voluptate ut proident qui anim et magna quis nulla ad. Laborum laborum voluptate et excepteur ullamco mollit duis veniam mollit. Amet sint nulla exercitation commodo nulla ipsum quis laboris consequat irure. Aute ex mollit ad est eiusmod fugiat fugiat voluptate proident.",
                 author_name: 'Bikas',
                 author_id: "@tugWar",
                 likes: 2,
             },
             {
-                replyToPersionId:"@tugWar",
+                replyToPersionId: "@tugWar",
                 comment: "Lodu aur koi kam dhanda nhi hai kya Anim id cillum consectetur Lorem nostrud mollit mollit cillum culpa. Adipisicing deserunt nostrud elit laboris dolore elit eiusmod velit id. Deserunt aliquip quis et sit culpa eiusmod adipisicing mollit fugiat aliqua.?",
                 author_name: 'ramesh',
                 author_id: "@ramesh872",
@@ -655,14 +661,14 @@ export const comments: comment_type[] = [
         likes: 21,
         replies: [
             {
-                replyToPersionId:"@ixbxe",
+                replyToPersionId: "@ixbxe",
                 comment: "Bery naise ReNisi excepteur proident consequat culpa aliquip nulla nulla sunt tempor dolore ipsum exercitation. Ullamco cupidatat duis duis laborum nostrud. Nostrud et reprehenderit ex consectetur consectetur est eiusmod aliquip id consequat amet.ply, Wow",
                 author_name: 'Bikas',
                 author_id: "@tugWar",
                 likes: 2,
             },
             {
-                replyToPersionId:"@tugWar",
+                replyToPersionId: "@tugWar",
                 comment: "Lodu aur koId occaecat aute et aliquip mollit. Voluptate velit eiusmod sunt irure qui sunt magna nulla tempor laborum consequat in aliquip non. Ex anim eiusmod minim aliqua. Quis eiusmod sit incididunt tempor. Laboris in excepteur anim occaecat cillum excepteur pariatur. Commodo ut aliquip nisi in duis.i kam dhanda nhi hai kya ?",
                 author_name: 'ramesh',
                 author_id: "@ramesh872",
@@ -678,14 +684,14 @@ export const comments: comment_type[] = [
         likes: 21,
         replies: [
             {
-                replyToPersionId:"@ixbxe",
+                replyToPersionId: "@ixbxe",
                 comment: "Bery naise Reply, WoCommodo quis elit aute voluptate aute est ut. Ut fugiat adipisicing amet sunt magna anim excepteur enim. Nostrud magna nostrud nulla commodo et occaecat elit ipsum ullamco Lorem dolore consectetur officia fugiat.w",
                 author_name: 'Bikas',
                 author_id: "@tugWar",
                 likes: 2,
             },
             {
-                replyToPersionId:"@tugWar",
+                replyToPersionId: "@tugWar",
                 comment: "Lodu aur koi kam dhanda nMinim officia eiusmod elit quis nostrud esse commodo esse culpa cupidatat. Cillum non amet magna sunt id reprehenderit non quis duis. Exercitation tempor id duis exercitation ipsum in esse occaecat et consectetur adipisicing commodo voluptate. Anim anim nostrud irure nostrud magna ipsum qui consectetur esse dolor. Consequat elit incididunt officia dolor et nisi sit incididunt.hi hai kya ?",
                 author_name: 'ramesh',
                 author_id: "@ramesh872",
@@ -701,14 +707,14 @@ export const comments: comment_type[] = [
         likes: 21,
         replies: [
             {
-                replyToPersionId:"@ixbxe",
+                replyToPersionId: "@ixbxe",
                 comment: "Bery naise Reply, Wow",
                 author_name: 'Bikas',
                 author_id: "@tugWar",
                 likes: 2,
             },
             {
-                replyToPersionId:"@tugWar",
+                replyToPersionId: "@tugWar",
                 comment: "Lodu aur koi kam dhanda nhi hai kya ?",
                 author_name: 'ramesh',
                 author_id: "@ramesh872",
@@ -724,14 +730,14 @@ export const comments: comment_type[] = [
         likes: 21,
         replies: [
             {
-                replyToPersionId:"@ixbxe",
+                replyToPersionId: "@ixbxe",
                 comment: "Bery naise Reply, Qui cupidatat Lorem nisi dolor duis sint aliquip. Duis sunt do voluptate ut proident qui anim et magna quis nulla ad. Laborum laborum voluptate et excepteur ullamco mollit duis veniam mollit. Amet sint nulla exercitation commodo nulla ipsum quis laboris consequat irure. Aute ex mollit ad est eiusmod fugiat fugiat voluptate proident.",
                 author_name: 'Bikas',
                 author_id: "@tugWar",
                 likes: 2,
             },
             {
-                replyToPersionId:"@tugWar",
+                replyToPersionId: "@tugWar",
                 comment: "Lodu aur koi kam dhanda nhi hai kya Anim id cillum consectetur Lorem nostrud mollit mollit cillum culpa. Adipisicing deserunt nostrud elit laboris dolore elit eiusmod velit id. Deserunt aliquip quis et sit culpa eiusmod adipisicing mollit fugiat aliqua.?",
                 author_name: 'ramesh',
                 author_id: "@ramesh872",
@@ -747,14 +753,14 @@ export const comments: comment_type[] = [
         likes: 21,
         replies: [
             {
-                replyToPersionId:"@ixbxe",
+                replyToPersionId: "@ixbxe",
                 comment: "Bery naise ReNisi excepteur proident consequat culpa aliquip nulla nulla sunt tempor dolore ipsum exercitation. Ullamco cupidatat duis duis laborum nostrud. Nostrud et reprehenderit ex consectetur consectetur est eiusmod aliquip id consequat amet.ply, Wow",
                 author_name: 'Bikas',
                 author_id: "@tugWar",
                 likes: 2,
             },
             {
-                replyToPersionId:"@tugWar",
+                replyToPersionId: "@tugWar",
                 comment: "Lodu aur koId occaecat aute et aliquip mollit. Voluptate velit eiusmod sunt irure qui sunt magna nulla tempor laborum consequat in aliquip non. Ex anim eiusmod minim aliqua. Quis eiusmod sit incididunt tempor. Laboris in excepteur anim occaecat cillum excepteur pariatur. Commodo ut aliquip nisi in duis.i kam dhanda nhi hai kya ?",
                 author_name: 'ramesh',
                 author_id: "@ramesh872",
@@ -770,14 +776,14 @@ export const comments: comment_type[] = [
         likes: 21,
         replies: [
             {
-                replyToPersionId:"@ixbxe",
+                replyToPersionId: "@ixbxe",
                 comment: "Bery naise Reply, WoCommodo quis elit aute voluptate aute est ut. Ut fugiat adipisicing amet sunt magna anim excepteur enim. Nostrud magna nostrud nulla commodo et occaecat elit ipsum ullamco Lorem dolore consectetur officia fugiat.w",
                 author_name: 'Bikas',
                 author_id: "@tugWar",
                 likes: 2,
             },
             {
-                replyToPersionId:"@tugWar",
+                replyToPersionId: "@tugWar",
                 comment: "Lodu aur koi kam dhanda nMinim officia eiusmod elit quis nostrud esse commodo esse culpa cupidatat. Cillum non amet magna sunt id reprehenderit non quis duis. Exercitation tempor id duis exercitation ipsum in esse occaecat et consectetur adipisicing commodo voluptate. Anim anim nostrud irure nostrud magna ipsum qui consectetur esse dolor. Consequat elit incididunt officia dolor et nisi sit incididunt.hi hai kya ?",
                 author_name: 'ramesh',
                 author_id: "@ramesh872",
@@ -786,4 +792,47 @@ export const comments: comment_type[] = [
 
         ]
     }
+]
+
+export const stories: story_type[] = [
+    {
+        imageLink: 'https://source.unsplash.com/random/200x200?sig=4',
+        name: 'Vikas',
+        userId: '1e3cerd24q2fcboxui'
+    },
+    {
+        imageLink: 'https://source.unsplash.com/random/200x200?sig=1',
+        name: 'Rahul',
+        userId: '1e3rd24q2fcbcboxui'
+    },
+    {
+        imageLink: 'https://source.unsplash.com/random/200x200?sig=2',
+        name: 'Ritik',
+        userId: '1e3rd24qce2fcboxui'
+    },
+    {
+        imageLink: 'https://source.unsplash.com/random/200x200?sig=14',
+        name: 'Brosdk',
+        userId: '1e3rced24q2fcboxui'
+    },
+    {
+        imageLink: 'https://source.unsplash.com/random/200x200?sig=11',
+        name: 'Kyle',
+        userId: '1e3rd24q2fcbocwxui'
+    },
+    {
+        imageLink: 'https://source.unsplash.com/random/200x200?sig=4',
+        name: 'BBT',
+        userId: '1e3rd24q2fcbqoxui'
+    },
+    {
+        imageLink: 'https://source.unsplash.com/random/200x200?sig=7',
+        name: 'Lambo',
+        userId: '1e3rd24q2fccweboxui'
+    },
+    {
+        imageLink: 'https://source.unsplash.com/random/200x200?sig=8',
+        name: 'Google',
+        userId: '1e3rd24q2fcbwsxui'
+    },
 ]

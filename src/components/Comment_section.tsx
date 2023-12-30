@@ -19,7 +19,7 @@ const Comment_section = () => {
 
 
     return (
-        (state ?
+        (!state ?
             <View style={styles.main}>
                 <TouchableOpacity onPress={() => setState(!state)} style={{ backgroundColor: 'rgba(0,0,0,0.4)', flex: 1 }}></TouchableOpacity>
                 <View style={{ backgroundColor: 'lightgray', flex: 3, paddingHorizontal: 20, paddingVertical: 18 }}>

@@ -35,14 +35,14 @@ const styles = StyleSheet.create({
     desc: {
         fontFamily: 'Poppins-Regular',
         paddingHorizontal: 12,
-        color: 'black',
+        color: 'white',
         fontSize: 12,
     },
     read: {
         fontFamily: 'Poppins-Regular',
         paddingHorizontal: 12,
         paddingBottom: 10,
-        color: theme.secondary,
+        color: 'gold',
         fontSize: 12
     },
 })

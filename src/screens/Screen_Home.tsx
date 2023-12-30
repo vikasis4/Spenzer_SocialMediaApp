@@ -5,32 +5,29 @@ import { theme } from '../config/app.variables'
 import Post from '../components/Post'
 import { post } from '../config/dummy'
 import { FlashList } from "@shopify/flash-list";
+import Story from '../components/story/Story'
 
 
 function Screen_Home({ navigation, route }: any): React.JSX.Element {
 
 
+
     return (
         <View style={styles.cont}>
             <Navbar navigation={navigation} route={route} />
-            <ScrollView>
-                <View style={{ height: 15 }}></View>
-                <View style={{ minHeight: 5 }}>
-                    <FlashList
-                        data={post}
-                        renderItem={(data) => <Post data={data} />}
-                        estimatedItemSize={5}
-                    />
-                </View>
-                <View style={{ height: 300 }}></View>
-            </ScrollView>
+                <Story />
+                <FlashList
+                    data={post}
+                    renderItem={(data) => <Post data={data} />}
+                    estimatedItemSize={5}
+                />
         </View>
     )
 }
 
 const styles = StyleSheet.create({
     cont: {
-        backgroundColor: theme.primary,
+        backgroundColor: theme.secondary,
         height: '100%',
     },
 

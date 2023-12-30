@@ -23,8 +23,8 @@ const Post = ({ data }: any) => {
             <View style={styles.contIn}>
                 <Image source={{ uri: author_img }} style={styles.profile_img} />
                 <View style={{ paddingHorizontal: 10, justifyContent: 'center' }}>
-                    <Text style={{ color: 'black', fontFamily: 'Poppins-Bold', fontSize: 20 }}>{author}</Text>
-                    <Text style={{ color: 'black', fontFamily: 'Poppins-Regular', fontSize: 14, position: 'relative', bottom: 8 }}>{author_id}</Text>
+                    <Text style={{ color: 'white', fontFamily: 'Poppins-Bold', fontSize: 20 }}>{author}</Text>
+                    <Text style={{ color: 'white', fontFamily: 'Poppins-Regular', fontSize: 14, position: 'relative', bottom: 8 }}>{author_id}</Text>
                 </View>
             </View>
             <TouchableOpacity activeOpacity={0.7} onPress={handleLike}>
@@ -72,9 +72,9 @@ const styles = StyleSheet.create({
     },
     cont: {
         margin: 10,
-        borderRadius: 6,
+        borderWidth:1,
         elevation: 8,
         paddingVertical: 12,
-        backgroundColor: theme.primary
+        backgroundColor: theme.secondary
     }
 })
