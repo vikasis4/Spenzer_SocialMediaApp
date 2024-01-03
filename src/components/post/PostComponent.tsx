@@ -16,7 +16,7 @@ const PostComponent = ({ data }: any) => {
         clickRef == 2 ? setLike(!like) : null;
         clickRef == 2 ? clickRef = 0 : null;
     }
-
+ 
 
     return (
         <View style={styles.cont}>
