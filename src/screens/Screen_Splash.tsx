@@ -3,7 +3,7 @@ import React from 'react'
 import { theme } from '../config/app.variables'
 
 function Screen_Splash({ navigation, route }: any): React.JSX.Element {
-
+ 
     React.useEffect(() => {
         setTimeout(() => {            
             navigation.replace("Nav_Bottom")
